@@ -1,8 +1,9 @@
+
 // Body
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: "Nunito", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
@@ -10,10 +11,41 @@ $line-height-base: 1.6;
 $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
-$pink: #f66d9b;
+$pink: #f66D9b;
 $red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+// Esquema de colores basados en el gobierno en turno
+$primary-text: #9D2449; 		// Pantone 7420
+$secondary-text: #621132; 		// Pantone 7421
+
+$dark-primary: #56242A;			// Pantone 490
+$dark-secondary: #4E232E;		// Pantone 504
+
+$gold-primary: #D4C19C;			// Pantone 468
+$gold-secondary: #B38E5D;		// Pantone 465
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;

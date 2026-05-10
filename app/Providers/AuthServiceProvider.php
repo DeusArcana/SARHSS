@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -12,7 +13,10 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        // 'App\Models\Model' => 'App\Policies\ModelPolicy',
+        'App\Model' => 'App\Policies\ModelPolicy',
+        App\User::class => App\Policies\UserPolicy::class,
+        'App\Models\Unidad' => 'App\Policies\UnidadPolicy',
+        'App\Models\Empleado' => 'App\Policies\EmpleadoPolicy',
     ];
 
     /**
@@ -24,6 +28,9 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        // El SuperUsuario puede realizar todas las acciones
+        Gate::before(function ($user, $ability) {
+            return $user->isSuperUser() ? true : null;
+        });
     }
 }
